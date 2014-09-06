@@ -22,21 +22,17 @@
   	<script type="text/javascript" src="../../js/jquery.scrollmagic.debug.js"></script>
 </head>
 <body>
-	<ul id="menu"></ul>
 	<div id="content-wrapper">
 		<div id="example-wrapper" class="horizontal">
 			<div class="scrollContent">
-				<section id="titlechart">
-					<div id="description">
-						<h1>Parallax Scrolling</h1>
-						<h2>No big deal, if you have ScrollMagic.</h2>
-						<p>
-							Adding a parallax effect to your website is just a matter of assigning different movement speeds for the layers.
-						</p>
-						<p>
-							The most common usecase for this are <a href="../advanced/parallax_sections.html">Parallax Sections</a>.
-						</p>
-						<a href="#" class="viewsource">view source</a>
+				<div class="spacer s0"></div>
+				<section class="demo fullwidth">
+					<div id="parallaxContainer">
+						<div class="layer1">
+							
+						</div>
+						<div class="layer2"></div>
+						<div class="layer3"></div>
 					</div>
 					<script>
 						var controller;
@@ -44,21 +40,7 @@
 							// init controller
 							controller = new ScrollMagic({vertical: false});
 						});
-					</script>
-				</section>
-				<div class="spacer s0"></div>
-				<section class="demo fullwidth">
-					<div id="parallaxContainer">
-						<div class="layer1">
-							<div class="box1 white">
-								<p>A box in the sky.</p>
-								<a href="#" class="viewsource">view source</a>
-							</div>
-						</div>
-						<div class="layer2"></div>
-						<div class="layer3"></div>
-					</div>
-					<script>
+
 						$(document).ready(function($) {
 							// build tween
 							var tween = new TimelineMax ()
@@ -79,38 +61,7 @@
 						});
 					</script>
 				</section>
-				<div class="spacer s4"></div>
-				<div class="spacer s0"></div>
-				<section class="demo fullwidth" id="trigger2">
-					<div id="parallaxText">
-						<h1 class="layer1">PARALLAX</h1>
-						<h1 class="layer2">PARALLAX</h1>
-						<h1 class="layer3">
-							PARALLAX
-							<a href="#" class="viewsource">view source</a>
-						</h1>
-						
-					</div>
-					<script>
-						$(document).ready(function($) {
-							// build tween
-							var tween = new TimelineMax ()
-								.add([
-									TweenMax.fromTo("#parallaxText .layer1", 1, {scale: 3, autoAlpha: 0.05, left: 300}, {left: -350, ease: Linear.easeNone}),
-									TweenMax.fromTo("#parallaxText .layer2", 1, {scale: 2, autoAlpha: 0.3, left: 150}, {left: -175, ease: Linear.easeNone})
-								]);
-
-							// build scene
-							var scene = new ScrollScene({triggerElement: "#trigger2", duration: $(window).width()})
-											.setTween(tween)
-											.addTo(controller);
-
-							// show indicators (requires debug extension)
-							scene.addIndicators();
-						});
-					</script>
-				</section>
-				<div class="spacer s_viewport"></div>
+				
 			</div>
 		</div>
 	</div>
