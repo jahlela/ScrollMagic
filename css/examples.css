@@ -638,23 +638,27 @@ a.viewsource:after {
 a.viewsource:before {
 	content: "{ ";
 }
-
 #parallaxContainer {
-	width: 600px;
-	height: 472px;
+	/*width: 900px;*/
+	width: 100%;
+	height: 500px;
 	top: 30px;
 	position: relative;
-	overflow: hidden;
 }
 #parallaxContainer .layer1 {
-	height: 100%;
-	text-align: center;
-	top: 0;
-	position: absolute;
-	background: url("../img/sierras.jpg");
+	height: 500px;
+	width: 100%;
+	position: fixed;
+	top: 30px;
+	left: -50px;
+	/* background-repeat: no-repeat; */
+	/* text-align: center; */
+	/* display: block; */
+	background-size: cover;
+background-image: url("../img/sierras.jpg");
 }
 #parallaxContainer .layer2 {
-	background-image: url("../img/example_parallax_l2.png");
+	background-image: url("../img/parallax_trees7.png");
 	position: absolute;
 	height: 139px;
 	width: 100%;
@@ -667,13 +671,21 @@ a.viewsource:before {
 	width: 100%;
 	bottom: 0px;
 }
+
+#parallaxContainer .layer4 {
+	background-image: url("../img/parallax_car.png");
+	position: absolute;
+	height: 32px;
+	width: 100%;
+	bottom: 0px;
+}
 #parallaxText {
 	width: 0;
 	height: 100%;
 	margin: auto;
 	position: relative;
 }
-#parallaxText .layer1, #parallaxText .layer2, #parallaxText .layer3 {
+#parallaxText .layer1, #parallaxText .layer2, #parallaxText .layer3, #parallaxText .layer4 {
 	position: absolute;
 	font-size: 50px;
 	line-height: 50px;
@@ -697,10 +709,12 @@ a.viewsource:before {
 	font-style: normal;
 	font-weight: normal;
 }
-#parallax1, #parallax2, #parallax3 {
+#parallaxText .layer4 {
+	top: 51%;
+}
+#parallax1, #parallax2, #parallax3, #parallax4 {
 	height: 100vh;
 }
-
 .dynamicContent #content {
 	width: 480px;
 	margin: auto;

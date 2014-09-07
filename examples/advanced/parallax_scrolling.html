@@ -28,11 +28,11 @@
 				<div class="spacer s0"></div>
 				<section class="demo fullwidth">
 					<div id="parallaxContainer">
-						<div class="layer1">
-							
-						</div>
+						<div class="layer1"></div>
 						<div class="layer2"></div>
 						<div class="layer3"></div>
+						<div class="layer4"></div>
+
 					</div>
 					<script>
 						var controller;
@@ -47,7 +47,8 @@
 								.add([
 									TweenMax.to("#parallaxContainer .layer1", 1, {backgroundPosition: "-40% 0", ease: Linear.easeNone}),
 									TweenMax.to("#parallaxContainer .layer2", 1, {backgroundPosition: "-500% 0", ease: Linear.easeNone}),
-									TweenMax.to("#parallaxContainer .layer3", 1, {backgroundPosition: "-225% 0", ease: Linear.easeNone})
+									TweenMax.to("#parallaxContainer .layer3", 1, {backgroundPosition: "-225% 0", ease: Linear.easeNone}),
+									TweenMax.to("#parallaxContainer .layer4", 1, {backgroundPosition: "-400% 0", ease: Linear.easeNone})
 								]);
 
 							// build scene
